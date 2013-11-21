@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html"
+        template="/templates/default.xhtml">
+        <ui:define name="content">
+                <h:form id="mebelform">
+                        <h:panelGrid columns="2">
+                                <f:facet name="header">Set mebel to add</f:facet>
+                                <h:outputText value="Model" />
+                                <h:inputText id="model" value="#{mebelF.mebel.model}" />
+
+                                <h:outputText value="Rodzaj" />
+                                <h:inputText id="rodzaj" value="#{mebelF.mebel.rodzaj}" />
+
+                                <h:outputText value="Cena" />
+                                <h:inputText id="cena" value="#{mebelF.mebel.cena}">
+                                        <f:validateDoubleRange minimum="20.5" maximum="150.5" />
+                                </h:inputText>
+
+                                <h:outputText value="Nr Seryjny" />
+                                <h:inputText id="nr_seryjny" value="#{mebelF.mebel.nr_seryjny}"/>
+                               
+
+                                <h:outputText value="Długość" />
+                                <h:inputText id="dlugosc" value="#{mebelF.mebel.dlugosc}" />
+                                
+                                <h:outputText value="Szerokosc" />
+                                <h:inputText id="szerokosc" value="#{mebelF.mebel.szerokosc}" />
+                        </h:panelGrid>
+
+                        <h:commandButton value="#{msg.mebelFormOKButton}"
+                                action="#{mebelF.addMebelA}" />
+
+                        <h:panelGrid>
+                                <h:messages showDetail="#{true}" showSummary="#{false}" />
+                        </h:panelGrid>
+                </h:form>
+        </ui:define>
+</ui:composition>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:h="http://java.sun.com/jsf/html">
+        <div>
+                <h:form>
+                        <ul>
+                                <li><h:commandLink action="home?faces-redirect=true">
+                                                <h:outputText value="#{msg.linkHome}" />
+                                        </h:commandLink></li>
+                                <li><h:commandLink action="addMebel?faces-redirect=true">
+                                                <h:outputText value="#{msg.mebelAddLabel}" />
+                                        </h:commandLink></li>
+
+                                <li><h:commandLink action="delMebel?faces-redirect=true">
+                                                <h:outputText value="#{msg.mebelDelLabel}" />
+                                        </h:commandLink></li>
+                                        <li><h:commandLink action="searchMebel?faces-redirect=true">
+                                                <h:outputText value="#{msg.mebelSearchLabel}" />
+                                        </h:commandLink></li>
+                                <li><h:commandLink action="mebelList?faces-redirect=true">
+                                                <h:outputText value="#{msg.mebelAllLabel}" />
+                                        </h:commandLink></li>
+                        </ul>
+                </h:form>
+        </div>
+</ui:composition>
